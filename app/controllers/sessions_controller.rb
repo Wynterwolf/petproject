@@ -1,10 +1,10 @@
 class SessionsController < ApplicationController
 
     get '/login' do
-        erb :'sessions/login'
+        erb :'/sessions/login'
     end
 
-    post '/login' do 
+    post '/login' do
         # find the user by their email:
         user = User.find_by_email(params[:email])
         # if they typed in the right password then log them in, if not show them the form again

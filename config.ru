@@ -7,4 +7,4 @@ end
 run ApplicationController
 # if you add controllers, add them here
 use UsersController
-
+use SessionsController
