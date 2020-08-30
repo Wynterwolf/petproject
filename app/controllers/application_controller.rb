@@ -8,10 +8,22 @@ class ApplicationController < Sinatra::Base
     # use sessions and session secret
     set :sessions, true
     set :session_secret, ENV["SESSION_SECRET"]
+    #d for patch
+    set :method_override, true
   end
 
   get "/" do
     erb :welcome
   end
 
+  private
+
+  def current_user
+    User.find_by_id(session[:id])
+  end
+
+  def logged_in?
+    !!current_user
+  end
+  
 end
