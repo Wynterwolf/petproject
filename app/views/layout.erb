@@ -17,8 +17,16 @@
     <div class="wrapper">
 <%# log in and log out links %>
 <nav>
+<%# condition logig for logged in users %>
+<% if !logged_in? %>
   <a href="/sessions/login">Log In</a>
   <a href="/users/new">Sign Up</a>
+  <% else %>
+  <form method="post" action="/logout">
+  <input type="hidden" name="_method" value="delete" />
+  <input type="submit" value="log out" />
+  </form>
+  <% end %>
 </nav>
 
         <%= yield %>
