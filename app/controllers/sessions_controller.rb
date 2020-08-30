@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
     get '/login' do
-        erb :'/sessions/login'
+        erb :'sessions/login'
     end
 
     post '/login' do 
@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
           redirect "/"
         else 
           @error = "Incorrect email or password"
-          erb :'/sessions/login'
+          erb :'sessions/login'
         end
     end
 end
