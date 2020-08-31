@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
 
   get "/" do
     @dogs = dog.all 
-    erb :/dogs/index.html
+    erb :'/dogs/index.html'
   end
 
   not_found do
