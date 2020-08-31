@@ -13,7 +13,13 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    erb :welcome
+    @dogs = dog.all 
+    erb :/dogs/index.html
+  end
+
+  not_found do
+    flash[:error] = "Whoops! I couildn't find that route"
+    redirect "/posts"
   end
 
   private
@@ -25,5 +31,10 @@ class ApplicationController < Sinatra::Base
   def logged_in?
     !!current_user
   end
+
+  def redirect_if_not_logged_in
+    if !logged_in?
+      flash[:error] = "You must be logged in to view this page"
+      redirect request.referrer || "/login"
   
 end
