@@ -2,22 +2,22 @@ class DogsController < ApplicationController
 
   # GET: /dogs -> index
   get "/dogs" do
-    @dogs = Post.all
+    @dogs = Dog.all
     erb :"/dogs/index.html"
   end
 
   # GET: /dogs/new -> new
   get "/dogs/new" do
     redirect_if_not_logged_in
-    @post = Post.new
+    @post = Dog.new
     erb :"/dogs/new.html"
   end
 
   # POST: /dogs -> create
   post "/dogs" do
     redirect_if_not_logged_in
-    @post = current_user.dogs.build(title: params[:dog][:name], content: params[:dog][:age])
-    if @post.save
+    @post = current_user.dogs.build(name: params[:dog][:name], age: params[:dog][:age], breed: params[:dog][:breed])
+    if @dog.save
       redirect "/dogs"
     else
       erb :"/dogs/new.html"
@@ -26,22 +26,22 @@ class DogsController < ApplicationController
 
   # GET: /dogs/5 -> show
   get "/dogs/:id" do
-    set_post
+    set_dog
     erb :"/dogs/show.html"
   end
 
   # GET: /dogs/5/edit -> edit
   get "/dogs/:id/edit" do
-    set_post
+    set_dog
     redirect_if_not_authorized
     erb :"/dogs/edit.html"
   end
 
   # PATCH: /dogs/5 -> update
   patch "/dogs/:id" do
-    set_post
+    set_dog
     redirect_if_not_authorized
-    if @post.update(title: params[:post][:title], content: params[:post][:content])
+    if @dog.update(name: params[:dog][:name], age: params[:dog][:age], breed: params[:dog][:breed])
       flash[:success] = "Post successfully updated"
       redirect "/dogs/#{@post.id}"
     else 
@@ -51,18 +51,18 @@ class DogsController < ApplicationController
 
   # DELETE: /dogs/5 - destroy
   delete "/dogs/:id" do
-    set_post
+    set_dog
     redirect_if_not_authorized
-    @post.destroy
+    @dog.destroy
     redirect "/dogs"
   end
 
   private 
 
-  def set_post 
-    @post = Post.find_by_id(params[:id])
-    if @post.nil?
-      flash[:error] = "Couldn't find a Post with id: #{params[:id]}"
+  def set_dog
+    @dog = Dog.find_by_id(params[:id])
+    if @dog.nil?
+      flash[:error] = "Couldn't find a Dog with id: #{params[:id]}"
       redirect "/dogs"
     end
   end

@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    @dogs = dog.all 
+    # @dogs = dog.all 
     erb :'/dogs/index.html'
   end
 
@@ -36,5 +36,6 @@ class ApplicationController < Sinatra::Base
     if !logged_in?
       flash[:error] = "You must be logged in to view this page"
       redirect request.referrer || "/login"
-  
+    end
+  end
 end
