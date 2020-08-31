@@ -1,13 +1,13 @@
 class DogsController < ApplicationController
 
   # GET: /dogs -> index
-  get "/dogs" do
+  get "/" do
     @dogs = Dog.all
     erb :"/dogs/index.html"
   end
 
   # GET: /dogs/new -> new
-  get "/dogs/new" do
+  get "/new" do
     redirect_if_not_logged_in
     @dog = Dog.new
     erb :"/dogs/new.html"
@@ -25,20 +25,20 @@ class DogsController < ApplicationController
   end
 
   # GET: /dogs/5 -> show
-  get "/dogs/:id" do
+  get "/:id" do
     set_dog
     erb :"/dogs/show.html"
   end
 
   # GET: /dogs/5/edit -> edit
-  get "/dogs/:id/edit" do
+  get "/:id/edit" do
     set_dog
     redirect_if_not_authorized
     erb :"/dogs/edit.html"
   end
 
   # PATCH: /dogs/5 -> update
-  patch "/dogs/:id" do
+  patch "/:id" do
     set_dog
     redirect_if_not_authorized
     if @dog.update(name: params[:dog][:name], age: params[:dog][:age], breed: params[:dog][:breed])
@@ -50,7 +50,7 @@ class DogsController < ApplicationController
   end
 
   # DELETE: /dogs/5 - destroy
-  delete "/dogs/:id" do
+  delete "/:id" do
     set_dog
     redirect_if_not_authorized
     @dog.destroy
