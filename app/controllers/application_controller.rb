@@ -3,7 +3,7 @@ require './config/environment'
 class ApplicationController < Sinatra::Base
 
   configure do
-    set :public_folder, File.dirname(FILE) + '/static'
+    set :public_folder, File.dirname(__FILE__) + '/public'
     set :views, 'app/views'
     # use sessions and session secret
     set :sessions, true
@@ -13,12 +13,12 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    # @dogs = dog.all 
+    @dogs = Dog.all 
     erb :'/dogs/index.html'
   end
 
   not_found do
-    flash[:error] = "Whoops! I couildn't find that route"
+    # flash[:error] = "Whoops! I couildn't find that route"
     redirect "/posts"
   end
 
@@ -34,7 +34,7 @@ class ApplicationController < Sinatra::Base
 
   def redirect_if_not_logged_in
     if !logged_in?
-      flash[:error] = "You must be logged in to view this page"
+      # flash[:error] = "You must be logged in to view this page"
       redirect request.referrer || "/login"
     end
   end

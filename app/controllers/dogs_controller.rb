@@ -9,14 +9,14 @@ class DogsController < ApplicationController
   # GET: /dogs/new -> new
   get "/dogs/new" do
     redirect_if_not_logged_in
-    @post = Dog.new
+    @dog = Dog.new
     erb :"/dogs/new.html"
   end
 
   # POST: /dogs -> create
   post "/dogs" do
     redirect_if_not_logged_in
-    @post = current_user.dogs.build(name: params[:dog][:name], age: params[:dog][:age], breed: params[:dog][:breed])
+    @dog = current_user.dogs.build(name: params[:dog][:name], age: params[:dog][:age], breed: params[:dog][:breed])
     if @dog.save
       redirect "/dogs"
     else
@@ -70,7 +70,7 @@ class DogsController < ApplicationController
   def redirect_if_not_authorized
     redirect_if_not_logged_in
     if !authorize_post(@post)
-      flash[:error] = "You don't have permission to do that action"
+      # flash[:error] = "You don't have permission to do that action"
       redirect "/dogs"
     end
   end
