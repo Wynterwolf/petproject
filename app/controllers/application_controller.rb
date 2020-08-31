@@ -3,7 +3,7 @@ require './config/environment'
 class ApplicationController < Sinatra::Base
 
   configure do
-    set :public_folder, 'public'
+    set :public_folder, File.dirname(FILE) + '/static'
     set :views, 'app/views'
     # use sessions and session secret
     set :sessions, true
