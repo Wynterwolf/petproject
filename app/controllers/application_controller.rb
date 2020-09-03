@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
 
   not_found do
     # flash[:error] = "Whoops! I couildn't find that route"
-    redirect "/posts"
+    redirect "/dogs"
   end
 
   private
