@@ -1,7 +1,7 @@
 class DogsController < ApplicationController
 
   # GET: /dogs -> index
-  get "/" do
+  get "/dogs" do
     @dogs = Dog.all
     erb :"/dogs/index.html"
   end
@@ -50,7 +50,7 @@ class DogsController < ApplicationController
   end
 
   # DELETE: /dogs/5 - destroy
-  delete "dogs/:id" do
+  delete "/dogs/:id" do
     set_dog
     redirect_if_not_authorized
     @dog.destroy
