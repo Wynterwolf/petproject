@@ -42,15 +42,15 @@ class DogsController < ApplicationController
     set_dog
     redirect_if_not_authorized
     if @dog.update(name: params[:dog][:name], age: params[:dog][:age], breed: params[:dog][:breed])
-      flash[:success] = "Post successfully updated"
-      redirect "/dogs/#{@post.id}"
+      #flash[:success] = "Post successfully updated"
+      redirect "/dogs/#{@dog.id}"
     else 
       erb :"/dogs/edit.html"
     end
   end
 
   # DELETE: /dogs/5 - destroy
-  delete "/:id" do
+  delete "dogs/:id" do
     set_dog
     redirect_if_not_authorized
     @dog.destroy
@@ -69,14 +69,14 @@ class DogsController < ApplicationController
 
   def redirect_if_not_authorized
     redirect_if_not_logged_in
-    if !authorize_post(@post)
+    if !authorize_post(@dog)
       # flash[:error] = "You don't have permission to do that action"
       redirect "/dogs"
     end
   end
 
-  def authorize_post(post)
-    current_user == post.author
+  def authorize_post(dog)
+    current_user == dog.user
   end
 
 end
