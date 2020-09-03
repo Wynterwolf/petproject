@@ -6,7 +6,7 @@
 <% if authorize_post(@dog) %>
   <div>
     <a href="/dogs/<%= @dog.id %>/edit"><button>Edit</button></a> 
-    <form method="dog" action="/dogs/<%= @dog.id %>" style="display: inline-block;">
+    <form method="post" action="/dogs/<%= @dog.id %>" style="display: inline-block;">
       <input type="hidden" name="_method" value="delete" />
       <input type="submit" value="Delete" />
     </form>
