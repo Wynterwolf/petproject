@@ -1,0 +1,14 @@
+<h1>This is the show page</h1>
+
+<h1><%= @dog.name %></h1>
+<p><%= @dog.breed %></p>
+<p><%= @dog.age %></p>
+<% if authorize_post(@dog) %>
+  <div>
+    <a href="/dogs/<%= @dog.id %>/edit"><button>Edit</button></a> 
+    <form method="dog" action="/dogs/<%= @dog.id %>" style="display: inline-block;">
+      <input type="hidden" name="_method" value="delete" />
+      <input type="submit" value="Delete" />
+    </form>
+  </div>
+<% end %>
