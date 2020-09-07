@@ -28,7 +28,9 @@ Sign In -- If the user already has an account
 
 Sign Up -- Where to sign up for an account
 
-Add A Dog -- Once logged in, you can access this button to add your foster pet to the list.
+Create New Adoptable! -- Once logged in, you can access this button to add your foster pet to the list.
+
+Once logged in you have access to edit, delete, and create your adoption records.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
