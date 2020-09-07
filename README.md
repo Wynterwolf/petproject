@@ -1,1 +1,39 @@
+# Dog Adoption App
 
+Dog adoption app is a quick and easy way for foster parents to list their pets that are looking for a furever home.
+
+## Installation
+
+To fork and clone this repo from your terminal window:
+
+```git clone https://github.com/Wynterwolf/petproject```
+
+Open the project in your favorite code editor. Open a term window and do the following command:
+
+```bundle install```
+
+If you are using Windows OS, working through the Ubuntu WSL terminal, you may need to run this command in your terminal.
+
+```sudo apt install libsqlite3-dev```
+
+You will need to start the app with the following command in your terminal.
+
+```shotgun```
+
+This will enable you to open the app by clicking the link in your terminal.
+
+## Usage
+
+Sign In -- If the user already has an account
+
+Sign Up -- Where to sign up for an account
+
+Add A Dog -- Once logged in, you can access this button to add your foster pet to the list.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
