@@ -17,7 +17,7 @@
     <div class="wrapper">
 <%# log in and log out links %>
 <nav>
-<%# condition logig for logged in users %>
+<%# condition for logged in users %>
 <% if !logged_in? %>
   <a href="/sessions/login">Log In</a>
   <a href="/users/new">Sign Up</a>
@@ -26,6 +26,7 @@
   <input type="hidden" name="_method" value="delete" />
   <input type="submit" value="log out" />
   </form>
+  <a href="/dogs/new">Create New Adoptable!</a>
   <% end %>
 </nav>
 
