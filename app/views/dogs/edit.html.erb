@@ -1,5 +1,17 @@
 <h1>Edit Post</h1>
 
+<% if @dog.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= @dog.errors.count %> error(s) prohibited this post from being saved:</h2>
+ 
+    <ul>
+    <% @dog.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <form method="post" action="/dogs/<%= @dog.id %>">
 <input type="hidden" name="_method" value="patch" />
 
