@@ -62,7 +62,7 @@ class DogsController < ApplicationController
   def set_dog
     @dog = Dog.find_by_id(params[:id])
     if @dog.nil?
-      # flash[:error] = "Couldn't find a Dog with id: #{params[:id]}"
+      flash[:error] = "Couldn't find a Dog with id: #{params[:id]}"
       redirect "/dogs"
     end
   end
@@ -70,7 +70,7 @@ class DogsController < ApplicationController
   def redirect_if_not_authorized
     redirect_if_not_logged_in
     if !authorize_post(@dog)
-      # flash[:error] = "You don't have permission to do that action"
+      flash[:error] = "You don't have permission to do that action"
       redirect "/dogs"
     end
   end

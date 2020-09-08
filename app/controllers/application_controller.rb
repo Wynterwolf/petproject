@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
   end
 
   not_found do
-    # flash[:error] = "Whoops! I couildn't find that route"
+    flash[:error] = "Whoops! I couildn't find that route"
     redirect "/dogs"
   end
 
@@ -33,7 +33,7 @@ class ApplicationController < Sinatra::Base
 
   def redirect_if_not_logged_in
     if !logged_in?
-      # flash[:error] = "You must be logged in to view this page"
+      flash[:error] = "You must be logged in to view this page"
       redirect request.referrer || "/login"
     end
   end
