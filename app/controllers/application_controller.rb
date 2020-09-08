@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
     set :sessions, true
     set :session_secret, ENV["SESSION_SECRET"]
     set :method_override, true
-    # register Sinatra::Flash
+    register Sinatra::Flash
   end
 
   get "/" do
