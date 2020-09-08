@@ -16,30 +16,23 @@ If you are using Windows OS, working through the Ubuntu WSL terminal, you may ne
 
 ```sudo apt install libsqlite3-dev```
 
-```
-Create  a file in the root of our project called `.env`
+Create  a file in the root of our project called `.env` Add the following text.
 
-```
-SESSION_SECRET=
-```
+```SESSION_SECRET=```
 
 now in your terminal, run
 
-```
-generate_secret
-```
+```generate_secret```
+
 paste the output into your `.env` file after the `=` sign, like so:
 
-```
-SESSION_SECRET=3688fd1c5e985597198a7d918d6937994356f4ae232dae625e7f8f83228378f786761c9fc778cc4cf823f2e09e11c5ed18eac69019de217eb32ddac81e0f74f7
-```
+```SESSION_SECRET=3688fd1c5e985597198a7d918d6937994356f4ae232dae625e7f8f83228378f786761c9fc778cc4cf823f2e09e11c5ed18eac69019de217eb32ddac81e0f74f7```
+
 **Don't use the same one as I have here!!!**
 
 Remember to add your `.env` file to a file called `.gitignore` so that it's not tracked in git. Create a file in the root of your project called `.gitignore` and put the following line in it:
 
-```
-.env
-```
+```.env```
 
 You will need to start the app with the following command in your terminal.
 
