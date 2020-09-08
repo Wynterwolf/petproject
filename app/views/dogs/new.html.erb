@@ -1,5 +1,17 @@
 <h1>New Dog for Adoption!</h1>
 
+<% if @dog && @dog.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= @dog.errors.count %> error(s) prohibited this adoption from being saved:</h2>
+ 
+    <ul>
+    <% @dog.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <form method="post" action="/dogs">
 <p>
 <div><label for="name">Name</label></div>
