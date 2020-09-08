@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
     get '/users/new' do
         #get form for account creation
+        @user = User.new
         erb :'users/new'
     end
 
@@ -12,6 +13,7 @@ class UsersController < ApplicationController
             redirect "/"
         else
             erb :'users/new'
+            #needs an error
         end
     end
 end
