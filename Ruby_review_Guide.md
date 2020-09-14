@@ -263,7 +263,12 @@ When We Add Our Form It Will Look Something Like This:
 	 - When using textarea the erb tags are placed at the end of text area as shown.
 	 - This is not a self closing tag.
 	 - This way the content will still persist upon form reloading.
+
+ - Displaying Errors
+	 - In the View we can handle displaying errors by copying this code from Rails Guides forActiveRecord Validations.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE5MzQyOTg3LDE5NjkyODkyMTQsNzQzOT
-c4MzEzXX0=
+eyJoaXN0b3J5IjpbLTIxNDYyOTYwNjksMTk2OTI4OTIxNCw3ND
+M5NzgzMTNdfQ==
 -->
