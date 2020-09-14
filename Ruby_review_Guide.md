@@ -138,9 +138,22 @@ Add a posts table with 3 columns
  - PATCH (UPDATE)
  - DELETE (DELETE)
 
-Corneal (What Does It Do?) Gives you generator commands that can: ● Create a new sinatra application ● Add a model/migration to an existing sinatra application ● Add a controller/with routes/views to an existing application (also adds controller to the config.ru file) Corneal Commands ● corneal new APP_PATH ○ Creates a New Sinatra Application // `We run this to start the app` ● corneal scaffold NAME ○ Generates a Model/Migration With Its Associated Views, Controllers and Routes ● corneal model NAME ○ Generates a Model and Migration ● corneal controller NAME ○ Generates a Controller with Routes and Views ● corneal help ○ Allows you to see a list of commands ● corneal help [COMMAND] ○ Describes Available Commands or One Specific Command ● corneal -v ○ Shows Corneal Version Number
+## Corneal (What Does It Do?)
+
+Gives you generator commands that can: 
+
+ - Create a new sinatra application
+ - Add a model/migration to an existing sinatra application
+ - Add a controller/with routes/views to an existing application (also adds controller to the config.ru file) 
+
+Corneal Commands 
+
+ - Lcorneal new APP_PATH ○ Creates a New Sinatra Application // `We run this to start the app`
+ - corneal scaffold NAME
+	 - Generates a Model/Migration With Its Associated Views, Controllers and Routes
+ - corneal model NAME ○ Generates a Model and Migration ● corneal controller NAME ○ Generates a Controller with Routes and Views ● corneal help ○ Allows you to see a list of commands ● corneal help [COMMAND] ○ Describes Available Commands or One Specific Command ● corneal -v ○ Shows Corneal Version Number
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyOTM4NjQzMSw3NDM5NzgzMTNdfQ==
+eyJoaXN0b3J5IjpbLTcyMTAxNjgzMSw3NDM5NzgzMTNdfQ==
 -->
