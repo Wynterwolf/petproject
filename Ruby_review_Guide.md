@@ -428,10 +428,19 @@ redirect_if_not_logged_in
 	- The value inside of an input when a form is submitted will be the value accessible in the params hash.
 - **div**
 	- Used for blocks (stacks on top of other blocks)
-- labels
+- **labels**
 	- Used for inline (won’t create a new line but will be displayed in the same line it’s added)
+	
+
+## Creating Our Controllers and Routes For Log In
+
+> class SessionsController < ApplicationController
+>  get '/login' do 
+	>  erb:'/sessions/login' 
+>  end
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NTE3NTcyOSwtMTEzODMzOTM1MCwtNj
+eyJoaXN0b3J5IjpbLTU2NjcxNDYyMiwtMTEzODMzOTM1MCwtNj
 Y2NDY3MDk0LDE2NTkxMjM3MDYsMTk2OTI4OTIxNCw3NDM5Nzgz
 MTNdfQ==
 -->
