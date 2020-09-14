@@ -191,17 +191,20 @@ Post Class:
 	 - This informs ActiveRecord to find a User Instance that’s associated with a Post we call this method on, NOT an Author Instance. 
 		 - The foreign_key :author_id is inferred from the fact that we have a belongs_to :author 
 		 - If the foreign_key was something else, we would also have to add a foreign key "something_else_id" 
+		 
+
+> class Post < ActiveRecord::Base 
+> belongs_to :author, class_name: "User" validates :title, presence: true validates :content, presence: true end
 
 User class: 
 **has_many :posts, foreign_key: "author_id"** 
  - Because our foreign_key is author_id we need to specify that in the option passed to has many (if we don’t, activerecord will assume the foreign key is user_id because we are invoking the macro from the User class)
  
-```class User < ActiveRecord::Base 
-has_secure_password 
-validates :email, presence: true, uniqueness: true 
-has_many :posts, foreign_key: "author_id" 
-end
+
+>  class User < ActiveRecord::Base  has_secure_password  validates
+> :email, presence: true, uniqueness: true  has_many :posts,
+> foreign_key: "author_id"  end
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgwMTA5NTU1LDc0Mzk3ODMxM119
+eyJoaXN0b3J5IjpbLTEyNjI2NzM3MjcsNzQzOTc4MzEzXX0=
 -->
