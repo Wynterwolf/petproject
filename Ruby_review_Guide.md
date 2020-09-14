@@ -407,34 +407,31 @@ redirect_if_not_logged_in
  - Now we can use Conditional Logic in Views To Display Links and Buttons When Needed CRUD Functionality Established
 
 ## Terminology For Forms
- - method
+ - **method**
 	 - GET or POST
 	 - These are HTTP VERBS
 	 - This is used even when you need to make a patch or delete request
- - action
+ - **action**
 	 - This refers to the path that the request will be sent to. This should match a path in your routes.
 	 - `<form method=”post” action="/users">` will send a request that matches the route `post ‘/users’`
- - type
+ - **type**
 	 - What it feels like to interact with the input
 	 - text, url, password, submit, read more on MDN
- - name
+ - **name**
  - When you submit the form this is how the input value is found within params
  - The value of `<input name="post[title]" /> will be accessed by params[:post][:title]` in controller
--  id
+-  **id**
 	- Used to link with label
-	- links with for= "" if you have <label for=”title”>Title</label> and <input id=”title” /> then clicking on
-the Title label will pull the title input into focus
-● value
-○ The value stored in that input, for text fields, this will be the text inside the field when the page
-loads, for submit inputs, this is the button tex
-○ The value inside of an input when a form is submitted will be the value accessible in the params
-hash.
-● div
-○ Used for blocks (stacks on top of other blocks)
-● labels
-○ Used for inline (won’t create a new line but will be displayed in the same line it’s added)
+	- links with `for= "" if you have <label for=”title”>Title</label> and <input id=”title” />` then clicking on the Title label will pull the title input into focus
+- **value**
+	- The value stored in that input, for text fields, this will be the text inside the field when the page loads, for submit inputs, this is the button tex
+	- The value inside of an input when a form is submitted will be the value accessible in the params hash.
+- **div**
+	- Used for blocks (stacks on top of other blocks)
+- labels
+	- Used for inline (won’t create a new line but will be displayed in the same line it’s added)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MTU0NTQ1MSwtMTEzODMzOTM1MCwtNj
+eyJoaXN0b3J5IjpbLTg0NTE3NTcyOSwtMTEzODMzOTM1MCwtNj
 Y2NDY3MDk0LDE2NTkxMjM3MDYsMTk2OTI4OTIxNCw3NDM5Nzgz
 MTNdfQ==
 -->
