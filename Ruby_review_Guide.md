@@ -219,10 +219,13 @@ We Get All Of The Posts and Iterate Over Them In The Corresponding View
 <h1>Posts</h1>
 <% @posts.each do |post| %>
 <p><a href="/posts/<%= post.id %>"><%= post.title %></a></p>
-<% end %>```
-
-
+<% end %>
+```
+**show.html.erb**
+● For show we need to find a Post using the id that’s coming through the params hash.
+○ We need the one that’s captured by the Dynamic Route.
+● Then, we can show the details in the "show.html.erb" view template.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTg3NDIyNDEsMTk2OTI4OTIxNCw3ND
-M5NzgzMTNdfQ==
+eyJoaXN0b3J5IjpbMTU3NDY5MzQ4NywxOTY5Mjg5MjE0LDc0Mz
+k3ODMxM119
 -->
