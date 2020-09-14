@@ -402,8 +402,11 @@ end
 end
 redirect_if_not_logged_in
 ```
+
+ - We can call this method in any controller action (route) where we want only logged in users to be able to go
+ - Now we can use Conditional Logic in Views To Display Links and Buttons When Needed CRUD Functionality Established
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMjgwMjkyNiwtMTEzODMzOTM1MCwtNj
+eyJoaXN0b3J5IjpbMTI2NTM2OTA4NywtMTEzODMzOTM1MCwtNj
 Y2NDY3MDk0LDE2NTkxMjM3MDYsMTk2OTI4OTIxNCw3NDM5Nzgz
 MTNdfQ==
 -->
