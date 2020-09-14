@@ -322,7 +322,14 @@ styled_flash
 How Do We Make Navigation Links Appear On Every Page?
 - We use the layout.erb file and add navigation links above yield 
 - In order to add navigation links we use `<nav> </nav> `tags
+
+## Adding a Private Method To The PostsController
+The "private" method will be added to the PostsController 
+
+It will find a Post based on "params[:id]" and then redirect to "/posts" with an error message if it doesn’t find a Post with that id.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NjQ2NzA5NCwxNjU5MTIzNzA2LDE5Nj
-kyODkyMTQsNzQzOTc4MzEzXX0=
+eyJoaXN0b3J5IjpbMjYwMTAzOTAxLC02NjY0NjcwOTQsMTY1OT
+EyMzcwNiwxOTY5Mjg5MjE0LDc0Mzk3ODMxM119
 -->
