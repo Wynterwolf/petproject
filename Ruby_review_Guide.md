@@ -267,21 +267,27 @@ When We Add Our Form It Will Look Something Like This:
  - Displaying Errors
 	 - In the View we can handle displaying errors by copying this code from Rails Guides for ActiveRecord Validations.
 
-Adding An Edit Form
+## Adding An Edit Form
+
 Using Templates
-● We can use our new form as a Template
-● This is because of the choice we have made regarding displaying errors and making sure the values for our
-inputs reflect the values stored in our @post instance variable.
+
+ - We can use our new form as a Template
+ - This is because of the choice we have made regarding displaying errors and making sure the values for our inputs reflect the values stored in our @post instance variable.
+
 Steps
-● We copy new.html.erb and paste it in "edit.html.erb"
-● We add a "method override" input to our form to send a Patch Request instead of a Post Request
-● We change the header from "New Post" to "Edit Post"
-● We update the form action
-○ <form method="post" action="/posts"> *NEW FORM*
-○ <form method="post" action="/posts/<%= @post.id %>"> *EDIT FORM*
+
+ - We copy new.html.erb and paste it in "edit.html.erb"
+ - We add a "method override" input to our form to send a Patch Request instead of a Post 
+
+Request
+
+ - We change the header from "New Post" to "Edit Post"
+ - We update the form action
+	 - <form method="post" action="/posts"> *NEW FORM*
+	 - <form method="post" action="/posts/<%= @post.id %>"> *EDIT FORM*
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwODEyOTQ5NSwxOTY5Mjg5MjE0LDc0Mz
-k3ODMxM119
+eyJoaXN0b3J5IjpbLTEzNTkyNDcwODcsMTk2OTI4OTIxNCw3ND
+M5NzgzMTNdfQ==
 -->
