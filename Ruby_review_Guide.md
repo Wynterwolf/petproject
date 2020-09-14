@@ -88,6 +88,13 @@ Views
  - This is used for Navigation and it helps us implement Conditional Logic
  - It should have Conditional Logic for Displaying Buttons (login, logout, sign up)
  - We have to implement yield so the same thing appears on every page.
+
+Views Files
+
+ - index view
+	 - Shows a list of posts with links to the full post
+ - show view
+	 - Displays a full post ● new view ○ Displays form to create a new post ● edit view ○ Displays form so we can update an existing post. Controllers ● SessionsController ○ For Logging In and Logging Out ● UsersController ○ For Creating New Accounts ● PostsController ○ For CRUD actions for posts
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQzOTc4MzEzXX0=
+eyJoaXN0b3J5IjpbMTIzMzM3NTAyNiw3NDM5NzgzMTNdfQ==
 -->
