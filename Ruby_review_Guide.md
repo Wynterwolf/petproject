@@ -210,10 +210,17 @@ User class:
 
 ## To Add An Index, We Get All Of The Posts and Iterate Over Them In The Corresponding View
 
-class PostsController < ApplicationController 
-get "/posts" do #INDEX 
-	@posts = Post.all 
-	erb :
+> class PostsController < ApplicationController  
+> get "/posts" do #INDEX 
+> 	@posts = Post.all
+> erb :"/posts/index.html"
+> end
+
+<h1>Posts</h1>
+<% @posts.each do |post| %>
+[<%= post.title %>](/posts/<%= post.id %>)
+
+<% end %>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE4MTE5NzAsNzQzOTc4MzEzXX0=
+eyJoaXN0b3J5IjpbMTk2OTI4OTIxNCw3NDM5NzgzMTNdfQ==
 -->
