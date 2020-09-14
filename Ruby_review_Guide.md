@@ -114,9 +114,25 @@ Routes (HTTP VERB + PATH)
 	○ Handles Log Out Button Click. Clears Session. 
 ● get "/users/new" 
 	○ Renders The Registration Form 
-● post "/users" ○ Handles The Registration Form Submission ● get "/posts" ○ Index of Posts. Shows All Posts. ● get "/posts/new" ○ Renders Form To Create a New Post ● post "/posts" ○ Handles New Form Submission ● get "/posts/:id" Detail Page For A Single Post ● get "/posts/:id/edit" ○ Form To Edit Existing Post (only viewable by author of post) ● patch "/posts/:id" ○ Handle edit post form submission (only editable by author of post) ● delete "/posts/:id" ○ Delete a particular post (only deletable by author of post)
+● post "/users" 
+	○ Handles The Registration Form Submission 
+● get "/posts" 
+	○ Index of Posts. Shows All Posts. 
+● get "/posts/new" 
+	○ Renders Form To Create a New Post 
+● post "/posts" 
+	○ Handles New Form Submission 
+● get "/posts/:id" 
+Detail Page For A Single Post 
+
+● get "/posts/:id/edit" 
+○ Form To Edit Existing Post (only viewable by author of post) 
+● patch "/posts/:id" 
+○ Handle edit post form submission (only editable by author of post) 
+● delete "/posts/:id" 
+○ Delete a particular post (only deletable by author of post)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzODEwMTcyLDc0Mzk3ODMxM119
+eyJoaXN0b3J5IjpbLTIwMzQwMTU5MzYsNzQzOTc4MzEzXX0=
 -->
