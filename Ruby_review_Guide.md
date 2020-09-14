@@ -283,11 +283,28 @@ Request
 
  - We change the header from "New Post" to "Edit Post"
  - We update the form action
-	 - <form method="post" action="/posts"> *NEW FORM*
-	 - <form method="post" action="/posts/<%= @post.id %>"> *EDIT FORM*
+	 - `<form method="post" action="/posts">` *NEW FORM*
+	 - `<form method="post" action="/posts/<%= @post.id %>">` *EDIT FORM*
+
+## Adding Error Handling For When We Don’t Find a Record
+
+
+ - "Record is not found"
+○ When we encounter this using Post.find_by_id we can add a method that find the record and
+redirects with an error message if the record is not found
+● Middleware
+○ In order to display a flash message after a redirect, additional middleware is required.
+○ This middleware will allow us to write cookies, so some data will be persistent for a Single Request /
+Response Cycle and then it will be cleared.
+● Steps
+○ Install Sinatra Flash by typing in gem install sinatra-flash and add it to your gemfile
+○ Run bundle install
+○ register Sinatra::Flash in the application_controller.rb file configuration section
+○ Add the styled_flash view helper to your layout.erb file (this displays the flash messages)
+○ Create flash[
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTkyNDcwODcsMTk2OTI4OTIxNCw3ND
-M5NzgzMTNdfQ==
+eyJoaXN0b3J5IjpbNzA4MDY0NzkwLDE5NjkyODkyMTQsNzQzOT
+c4MzEzXX0=
 -->
