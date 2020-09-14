@@ -359,11 +359,51 @@ Only The Users Who Created a Post Can Update It or Delete It
 Protecting Routes Behind a Log In Requirement
 
  - This is to make sure that only logged in users can visit certain routes (for example we may not want to allow non-logged in users from visiting the routes that create new records/edit existing ones)
-● We can add a private method in the ApplicationController class.
+ - We can add a private method in the ApplicationController class.
+## Example application_controller.rb
+```
+require './config/environment'
+class ApplicationController < Sinatra::Base
+configure do
+set :public_folder, 'public'
+set :views, 'app/views'
+set :sessions, true
+set :session_secret, ENV["SESSION_SECRET"]
+set :method_override, true
+register Sinatra::Flash
+end
 
+get "/" do
+@posts = Post.all
+erb :"/posts/index.html"
+end
 
+not_found do
+flash[:error] = "Whoops! Couldn't find that route"
+redirect "/posts"
+end
+
+private
+
+def current_user
+User.find_by_id(session[:id])
+end
+
+def logged_in?
+!!current_user
+end
+
+def redirect_if_not_logged_in
+if !logged_in?
+flash[:error] = "You must be logged in to view that page"
+redirect request.referrer || "/login"
+end
+end
+end
+redirect_if_not_logged_in
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzQ1NDkxMDgsLTExMzgzMzkzNTAsLT
-Y2NjQ2NzA5NCwxNjU5MTIzNzA2LDE5NjkyODkyMTQsNzQzOTc4
-MzEzXX0=
+eyJoaXN0b3J5IjpbMTczMjgwMjkyNiwtMTEzODMzOTM1MCwtNj
+Y2NDY3MDk0LDE2NTkxMjM3MDYsMTk2OTI4OTIxNCw3NDM5Nzgz
+MTNdfQ==
 -->
