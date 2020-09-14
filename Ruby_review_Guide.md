@@ -464,12 +464,27 @@ redirect "/"
 end
 end
 ```
-app/views/sessions/login.erb
-Important Difference
-● We want to check if the credentials that the user has inputted match with an existing user.
-● This is why "has_secure_password", "validates", and "uniqueness" are important
+**Important Difference in app/views/sessions/login.erb**
+ - We want to check if the credentials that the user has inputted match with an existing user.
+ - This is why "has_secure_password", "validates", and "uniqueness" are important
+```
+<h1>Log In</h1>
+<%= @error %>
+<form method="post" action="/login">
+<p>
+<div><label for="email">Email</label></div>
+<input type="email" name="email" id="email" />
+</p>
+<p>
+<div><label for="password">Password</label></div>
+<input type="password" name="password" id="password" />
+</p>
+<input type="submit" value="Sign In"/>
+</form>
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcxNTkwNjAzLC0xMTM4MzM5MzUwLC02Nj
+eyJoaXN0b3J5IjpbMzQwNzk1OTQ0LC0xMTM4MzM5MzUwLC02Nj
 Y0NjcwOTQsMTY1OTEyMzcwNiwxOTY5Mjg5MjE0LDc0Mzk3ODMx
 M119
 -->
