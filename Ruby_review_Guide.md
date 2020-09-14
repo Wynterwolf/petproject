@@ -345,24 +345,25 @@ end
  - The routes in the controller need to "find" a Post based on the "id" in params
 
 Building Out The Update Functionality
-authorize_post(post) #AUTHORIZATION CHECK (full version above)
-patch "/posts/:id" #UPDATE (full version above)
-redirect_if_not_authorized #REDIRECTS IF NOT AUTHORIZED (full version above)
-First we need to make sure That Only The Users Who Created a Post Can Update It or Delete It
-● The DRY method of doing this is to add a method that accepts a post as an argument
-● This method needs to ensure that the logged in user has permissions to interact with that post
-● We also made a method that redirects the current_user if they are not authorized to perform an action
-such as update, edit, or delete.
-● One we have these methods we want to invoke it right before we do anything that only an authorized user
-on a post would be allowed to do.
+`authorize_post(post)` #AUTHORIZATION CHECK 
+`patch "/posts/:id"` #UPDATE 
+`redirect_if_not_authorized` #REDIRECTS IF NOT AUTHORIZED 
+
+Only The Users Who Created a Post Can Update It or Delete It
+
+ - The DRY method of doing this is to add a method that accepts a post as an argument
+ - This method needs to ensure that the logged in user has permissions to interact with that post
+ - We also made a method that redirects the current_user if they are not authorized to perform an action such as update, edit, or delete.
+ - One we have these methods we want to invoke it right before we do anything that only an authorized user on a post would be allowed to do.
+
 Protecting Routes Behind a Log In Requirement
-● This is to make sure that only logged in users can visit certain routes (for example we may not want to
-allow non-logged in users from visiting the routes that create new records/edit existing ones)
+
+ - This is to make sure that only logged in users can visit certain routes (for example we may not want to allow non-logged in users from visiting the routes that create new records/edit existing ones)
 ● We can add a private method in the ApplicationController class.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTUyODQ2NDIsLTExMzgzMzkzNTAsLT
+eyJoaXN0b3J5IjpbLTE5NzQ1NDkxMDgsLTExMzgzMzkzNTAsLT
 Y2NjQ2NzA5NCwxNjU5MTIzNzA2LDE5NjkyODkyMTQsNzQzOTc4
 MzEzXX0=
 -->
