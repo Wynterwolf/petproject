@@ -296,11 +296,11 @@ Request
 	 - Install Sinatra Flash by typing in gem install sinatra-flash and add it to your gemfile
 	 - Run bundle install
 	 - register Sinatra::Flash in the application_controller.rb file configuration section
-○ Add the styled_flash view helper to your layout.erb file (this displays the flash messages)
-○ Create flash[
-
-
+	 - Add the styled_flash view helper to your layout.erb file (this displays the flash messages)
+	 - Create flash[:error] = “my error goes here” in a controller and then the next response will include your error.
+	 ```
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMjYyMzk0NiwxOTY5Mjg5MjE0LDc0Mz
+eyJoaXN0b3J5IjpbLTIzODM4ODgzMywxOTY5Mjg5MjE0LDc0Mz
 k3ODMxM119
 -->
