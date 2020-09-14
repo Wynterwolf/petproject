@@ -116,24 +116,31 @@ Add a posts table with 3 columns
 	 - Renders The Registration Form 
  - post "/users" 
 	- Handles The Registration Form Submission 
-- get "/posts" 
+ - get "/posts" 
 	- Index of Posts. Shows All Posts. 
-- get "/posts/new" 
+ - get "/posts/new" 
 	- Renders Form To Create a New Post 
-- post "/posts" 
+ - post "/posts" 
 	- Handles New Form Submission 
-- get "/posts/:id" 
+ - get "/posts/:id" 
 	- Detail Page For A Single Post 
-- get "/posts/:id/edit" 
+ - get "/posts/:id/edit" 
 	- Form To Edit Existing Post (only viewable by author of post) 
-- patch "/posts/:id" 
+ - patch "/posts/:id" 
 	- Handle edit post form submission (only editable by author of post) 
-- delete "/posts/:id" 
+ - delete "/posts/:id" 
 	- Delete a particular post (only deletable by author of post)
 
-HTTP VERBS 
-POST (CREATE) 
-GET (READ) ● PUT (UPDATE) ● PATCH (UPDATE) ● DELETE (DELETE)
+**HTTP VERBS** 
+ - POST (CREATE) 
+ - GET (READ)
+ - PUT (UPDATE) 
+ - PATCH (UPDATE)
+ - DELETE (DELETE)
+
+Corneal (What Does It Do?) Gives you generator commands that can: ● Create a new sinatra application ● Add a model/migration to an existing sinatra application ● Add a controller/with routes/views to an existing application (also adds controller to the config.ru file) Corneal Commands ● corneal new APP_PATH ○ Creates a New Sinatra Application // `We run this to start the app` ● corneal scaffold NAME ○ Generates a Model/Migration With Its Associated Views, Controllers and Routes ● corneal model NAME ○ Generates a Model and Migration ● corneal controller NAME ○ Generates a Controller with Routes and Views ● corneal help ○ Allows you to see a list of commands ● corneal help [COMMAND] ○ Describes Available Commands or One Specific Command ● corneal -v ○ Shows Corneal Version Number
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc4NTkwNDgwLDc0Mzk3ODMxM119
+eyJoaXN0b3J5IjpbLTIyOTM4NjQzMSw3NDM5NzgzMTNdfQ==
 -->
