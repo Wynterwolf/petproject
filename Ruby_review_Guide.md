@@ -298,9 +298,19 @@ Request
 	 - register Sinatra::Flash in the application_controller.rb file configuration section
 	 - Add the styled_flash view helper to your layout.erb file (this displays the flash messages)
 	 - Create flash[:error] = “my error goes here” in a controller and then the next response will include your error.
-	 ```
 ```
+class ApplicationController < Sinatra::Base
+configure do
+	set :public_folder, 'public'
+	set :views, 'app/views'
+	set :sessions, true
+	set :session_secret, ENV["SESSION_SECRET"]
+	set :method_override, true
+	register Sinatra::Flash
+end
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzODM4ODgzMywxOTY5Mjg5MjE0LDc0Mz
+eyJoaXN0b3J5IjpbMTY1OTEyMzcwNiwxOTY5Mjg5MjE0LDc0Mz
 k3ODMxM119
 -->
