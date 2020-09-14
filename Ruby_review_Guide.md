@@ -457,16 +457,19 @@ else
 erb :'/sessions/login'
 end
 end
+
 delete '/logout' do
 session.clear
 redirect "/"
 end
 end
 ```
-
-
+app/views/sessions/login.erb
+Important Difference
+● We want to check if the credentials that the user has inputted match with an existing user.
+● This is why "has_secure_password", "validates", and "uniqueness" are important
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MTYxOTIxOCwtMTEzODMzOTM1MCwtNj
-Y2NDY3MDk0LDE2NTkxMjM3MDYsMTk2OTI4OTIxNCw3NDM5Nzgz
-MTNdfQ==
+eyJoaXN0b3J5IjpbNzcxNTkwNjAzLC0xMTM4MzM5MzUwLC02Nj
+Y0NjcwOTQsMTY1OTEyMzcwNiwxOTY5Mjg5MjE0LDc0Mzk3ODMx
+M119
 -->
