@@ -59,7 +59,7 @@ To Test It's Working
 
 **Note** - Eventually we'll have to load our 2 controllers within the `config.ru` file as well We will need to add "method_override" so that we're able to send a delete request for `logout`
 
-Database 
+**Database** 
 We'll need a `users` table with a column `password_digest` 
 We'll also need an additional column to find a user by (email or username) 
 
@@ -125,13 +125,13 @@ Routes (HTTP VERB + PATH)
 - get "/posts/:id" 
 	- Detail Page For A Single Post 
 - get "/posts/:id/edit" 
-Form To Edit Existing Post (only viewable by author of post) 
-● patch "/posts/:id" 
-○ Handle edit post form submission (only editable by author of post) 
-● delete "/posts/:id" 
-○ Delete a particular post (only deletable by author of post)
+	- Form To Edit Existing Post (only viewable by author of post) 
+- patch "/posts/:id" 
+	- Handle edit post form submission (only editable by author of post) 
+- delete "/posts/:id" 
+	- Delete a particular post (only deletable by author of post)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5ODc4NTY3OCw3NDM5NzgzMTNdfQ==
+eyJoaXN0b3J5IjpbLTk4NzYyNzc5Nyw3NDM5NzgzMTNdfQ==
 -->
