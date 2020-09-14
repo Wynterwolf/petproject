@@ -311,14 +311,20 @@ end
 ```
 styled_flash 
  - We add "styled_flash" view helper to our "layout.erb" file. 
- - ○ <%= styled_flash %> 
-- ● Now we can use Flash Messages to Display Text to our users after redirects. 
-- ● This is used for session based messaging 
-- ● It allows us to Display Error after a redirect by temporarily storing the error message layout.erb 
-- ● This is what Sinatra uses whenever we call an erb method ● When we call an erb method we are rendering a template at the path we specify ● This layout file is a kind of container that we render the template into inside of yield How Do We Make Navigation Links Appear On Every Page? CHECK ● We use the layout.erb file and add navigation links above yield ● In order to add navigation links we use
+	 - `<%= styled_flash %>` 
+- Now we can use Flash Messages to Display Text to our users after redirects. 
+- This is used for session based messaging 
+- It allows us to Display Error after a redirect by temporarily storing the error message layout.erb 
+- This is what Sinatra uses whenever we call an erb method 
+- When we call an erb method we are rendering a template at the path we specify 
+- This layout file is a kind of container that we render the template into inside of yield 
+
+How Do We Make Navigation Links Appear On Every Page?
+- We use the layout.erb file and add navigation links above yield 
+- In order to add navigation links we use
 
 tags
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNTk0MDQxMiwxNjU5MTIzNzA2LDE5Nj
+eyJoaXN0b3J5IjpbMTM2OTE0MDYzNywxNjU5MTIzNzA2LDE5Nj
 kyODkyMTQsNzQzOTc4MzEzXX0=
 -->
