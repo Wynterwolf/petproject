@@ -235,9 +235,36 @@ We Get All Of The Posts and Iterate Over Them In The Corresponding View
 
 ## For Assessment
 
+ - What determines where the browser sends a request upon submission?
+	 - method = "" and action= "" attribute values
+	 - Method is the HTTP Verb and the Action is the path it’s sent to
+ - What determined the Keys in the params hash that appear in the controller upon form submission?
+	 - The value of the "name" attributes in your form inputs
+	 -  
+When We Add Our Form It Will Look Something Like This:
+```
+<form method="post" action="/posts">
+<p>
+<div><label for="title">Title</label></div>
+<input id="title" type="text" name="post[title]" value="<%= @post.title %>" />
+</p>
+<p>
+<div><label for="content">content</label></div>
+<textarea rows="8" cols="45" id="content" type="text" name="post[content]"><%= @post.content %></textarea>
+</p>
+<input type="submit" value="Create Post" />
+</form>
+```
 
-
+● The value attribute
+○ The value attribute will have the title from the previous post.
+○ If it’s a new post, it will be empty.
+○ In the name attribute, both post and title are keys.
+● The <textarea> tag
+○ When using textarea the erb tags are placed at the end of text area as shown.
+○ This is not a self closing tag.
+○ This way the content will still persist upon form reloading.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NzM3MzMxLDE5NjkyODkyMTQsNzQzOT
-c4MzEzXX0=
+eyJoaXN0b3J5IjpbLTIwOTUzMzQ4ODMsMTk2OTI4OTIxNCw3ND
+M5NzgzMTNdfQ==
 -->
