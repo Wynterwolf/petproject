@@ -208,20 +208,21 @@ User class:
 > :email, presence: true, uniqueness: true  has_many :posts,
 > foreign_key: "author_id"  end
 
-## To Add An Index, We Get All Of The Posts and Iterate Over Them In The Corresponding View
-
+## To Add An Index 
+We Get All Of The Posts and Iterate Over Them In The Corresponding View
 > class PostsController < ApplicationController  
 > get "/posts" do #INDEX 
 > 	@posts = Post.all
 > erb :"/posts/index.html"
 > end
-
 ```
 <h1>Posts</h1>
 <% @posts.each do |post| %>
-<p><%= post.title %>](/posts/<%= post.id %>)
+<p><a href="/posts/<%= post.id %>"><%= post.title %></a></p>
 <% end %>```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzg0Nzg3NywxOTY5Mjg5MjE0LDc0Mz
-k3ODMxM119
+eyJoaXN0b3J5IjpbLTE3NTg3NDIyNDEsMTk2OTI4OTIxNCw3ND
+M5NzgzMTNdfQ==
 -->
