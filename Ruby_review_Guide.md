@@ -255,16 +255,15 @@ When We Add Our Form It Will Look Something Like This:
 <input type="submit" value="Create Post" />
 </form>
 ```
-
-● The value attribute
-○ The value attribute will have the title from the previous post.
-○ If it’s a new post, it will be empty.
-○ In the name attribute, both post and title are keys.
-● The <textarea> tag
-○ When using textarea the erb tags are placed at the end of text area as shown.
-○ This is not a self closing tag.
-○ This way the content will still persist upon form reloading.
+ - The value attribute
+	 - The value attribute will have the title from the previous post.
+	 - If it’s a new post, it will be empty.
+	 - In the name attribute, both post and title are keys.
+ - The `<textarea>` tag
+	 - When using textarea the erb tags are placed at the end of text area as shown.
+	 - This is not a self closing tag.
+	 - This way the content will still persist upon form reloading.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTUzMzQ4ODMsMTk2OTI4OTIxNCw3ND
-M5NzgzMTNdfQ==
+eyJoaXN0b3J5IjpbNjE5MzQyOTg3LDE5NjkyODkyMTQsNzQzOT
+c4MzEzXX0=
 -->
