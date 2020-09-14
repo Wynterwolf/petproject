@@ -436,11 +436,37 @@ redirect_if_not_logged_in
 
 > class SessionsController < ApplicationController
 >  get '/login' do 
-	>  erb:'/sessions/login' 
+>  erb:'/sessions/login' 
 >  end
+```
+post '/login' do
+# find the user by their email:
+user = User.find_by_email(params[:email])
+
+# Authenticates the user and either logs them in or returns them to login.
+# if @user.try(:authenticate, params[:password] is another option)
+
+if user && user.authenticate(params[:password])
+session[:id] = user.id
+redirect "/"
+else
+
+# @error is also present in login.erb
+
+@error = "Incorrect email or password"
+erb :'/sessions/login'
+end
+end
+delete '/logout' do
+session.clear
+redirect "/"
+end
+end
+```
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NjcxNDYyMiwtMTEzODMzOTM1MCwtNj
+eyJoaXN0b3J5IjpbMTQ4MTYxOTIxOCwtMTEzODMzOTM1MCwtNj
 Y2NDY3MDk0LDE2NTkxMjM3MDYsMTk2OTI4OTIxNCw3NDM5Nzgz
 MTNdfQ==
 -->
