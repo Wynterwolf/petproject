@@ -233,8 +233,11 @@ We Get All Of The Posts and Iterate Over Them In The Corresponding View
 <% if authorize_post(@post) %>
 ```
 
+## For Assessment
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA2NjU0NDE4LDE5NjkyODkyMTQsNzQzOT
+eyJoaXN0b3J5IjpbMTI0NzM3MzMxLDE5NjkyODkyMTQsNzQzOT
 c4MzEzXX0=
 -->
