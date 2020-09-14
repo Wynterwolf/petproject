@@ -78,7 +78,6 @@ Post Model
  - Add a Post Model that belongs_to an author (a User)
 
 Views
-
  - We need a view with a "registration form" for "creating a new account" 
  - We need a view with "login form" for "logging into an existing account"
  - We need to have "navigation links" in "layout.erb"
@@ -105,6 +104,19 @@ Controllers
 	 - For Creating New Accounts
  - PostsController
 	 - For CRUD actions for posts
+	 
+Routes (HTTP VERB + PATH) 
+● get "/login" 
+	○ Renders The Log In Form 
+● post "/login" 
+	○ Handles The Log In Form Submission 
+● delete "/logout" 
+	○ Handles Log Out Button Click. Clears Session. 
+● get "/users/new" 
+	○ Renders The Registration Form 
+● post "/users" ○ Handles The Registration Form Submission ● get "/posts" ○ Index of Posts. Shows All Posts. ● get "/posts/new" ○ Renders Form To Create a New Post ● post "/posts" ○ Handles New Form Submission ● get "/posts/:id" Detail Page For A Single Post ● get "/posts/:id/edit" ○ Form To Edit Existing Post (only viewable by author of post) ● patch "/posts/:id" ○ Handle edit post form submission (only editable by author of post) ● delete "/posts/:id" ○ Delete a particular post (only deletable by author of post)
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE2OTMyNzAyLDc0Mzk3ODMxM119
+eyJoaXN0b3J5IjpbMTQzODEwMTcyLDc0Mzk3ODMxM119
 -->
