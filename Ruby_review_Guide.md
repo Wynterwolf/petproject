@@ -328,8 +328,24 @@ The "private" method will be added to the PostsController
 
 It will find a Post based on "params[:id]" and then redirect to "/posts" with an error message if it doesn’t find a Post with that id.
 
+```
+private
+def set_post
+	@post = Post.find_by_id(params[:id])
+	if @post.nil?
+		flash[:error] = "Couldn't find a Post with id: #{params[:id]}"
+		redirect "/posts"
+	end
+end
+```
+
+## Calling The Private Method
+
+ - We can now call our private methods from the routes in our Controller.
+ - The routes in the controller need to "find" a Post based on the "id" in params
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYwMTAzOTAxLC02NjY0NjcwOTQsMTY1OT
-EyMzcwNiwxOTY5Mjg5MjE0LDc0Mzk3ODMxM119
+eyJoaXN0b3J5IjpbLTExMzgzMzkzNTAsLTY2NjQ2NzA5NCwxNj
+U5MTIzNzA2LDE5NjkyODkyMTQsNzQzOTc4MzEzXX0=
 -->
