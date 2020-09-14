@@ -494,15 +494,51 @@ end
 	 - If you forget to pass in a key and just pass in a value, it will return the first record in the table
 
 ## Adding Logout Functionality
+ - First we Add Navigation so we can get to Sign Up and Log In Pages
+ - Whenever we have an "href" it has to match one of our get routes in one of our controllers.
+## Example of Layout.Erb
+```
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]--> <!--[if IE 7]> <html class="no-js ie7 oldie" lang="en">
+<![endif]--> <!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<title>Authentication</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/stylesheets/main.css" />
+</head>
+<body>
+<div class="wrapper">
+<nav>
+<a href="/posts">Posts</a>
+<% if !logged_in? %>
+<a href="/login">Log In</a>
+<a href="/users/new">Sign Up</a>
+<% else %>
+<a href="/posts/new">New Post</a>
+<form method="post" action="/logout" style="display: inline-block;">
+<input type="hidden" name="_method" value="delete" />
+<input type="submit" value="Log Out" />
+</form>
+<% end %>
+</nav>
+<%= styled_flash %>
+<%= yield %>
+<footer class="branding">
+<small>&copy; 2020 <strong>Authentication</strong></small>
+</footer>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!--[if lt IE 7]> <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script> <![endif]-->
+</body>
+</html>
+```
 
-● 
-
- - List item
-
-First we Add Navigation so we can get to Sign Up and Log In Pages
-● Whenever we have an "href" it has to match one of our get routes in one of our controllers.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MjAwNTEzMiwtMTEzODMzOTM1MCwtNj
-Y2NDY3MDk0LDE2NTkxMjM3MDYsMTk2OTI4OTIxNCw3NDM5Nzgz
-MTNdfQ==
+eyJoaXN0b3J5IjpbLTIwNDkxODU2MTEsLTExMzgzMzkzNTAsLT
+Y2NjQ2NzA5NCwxNjU5MTIzNzA2LDE5NjkyODkyMTQsNzQzOTc4
+MzEzXX0=
 -->
