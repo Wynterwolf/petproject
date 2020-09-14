@@ -217,11 +217,11 @@ User class:
 > end
 
 ```
-
+<h1>Posts</h1>
 <% @posts.each do |post| %>
-[<%= post.title %>](/posts/<%= post.id %>)
+<p><%= post.title %>](/posts/<%= post.id %>)
 <% end %>```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ0NzMwMDUyLDE5NjkyODkyMTQsNzQzOT
-c4MzEzXX0=
+eyJoaXN0b3J5IjpbLTIxMzg0Nzg3NywxOTY5Mjg5MjE0LDc0Mz
+k3ODMxM119
 -->
