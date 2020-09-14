@@ -483,8 +483,26 @@ end
 </form>
 ```
 
+## Finding Our User’s ID
+
+ - .find
+	 - This method takes an id and gives us the record with that id
+	 - If there isn’t one an error will be raised.
+ - .find_by
+	 - Takes in a Key Value pair and tries to find a matching record.
+	 - If there isn’t one it will return nil.
+	 - If you forget to pass in a key and just pass in a value, it will return the first record in the table
+
+## Adding Logout Functionality
+
+● 
+
+ - List item
+
+First we Add Navigation so we can get to Sign Up and Log In Pages
+● Whenever we have an "href" it has to match one of our get routes in one of our controllers.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQwNzk1OTQ0LC0xMTM4MzM5MzUwLC02Nj
-Y0NjcwOTQsMTY1OTEyMzcwNiwxOTY5Mjg5MjE0LDc0Mzk3ODMx
-M119
+eyJoaXN0b3J5IjpbLTI0MjAwNTEzMiwtMTEzODMzOTM1MCwtNj
+Y2NDY3MDk0LDE2NTkxMjM3MDYsMTk2OTI4OTIxNCw3NDM5Nzgz
+MTNdfQ==
 -->
