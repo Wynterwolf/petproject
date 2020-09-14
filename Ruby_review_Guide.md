@@ -216,11 +216,12 @@ User class:
 > erb :"/posts/index.html"
 > end
 
-<h1>Posts</h1>
+```
+
 <% @posts.each do |post| %>
 [<%= post.title %>](/posts/<%= post.id %>)
-
-<% end %>
+<% end %>```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2OTI4OTIxNCw3NDM5NzgzMTNdfQ==
+eyJoaXN0b3J5IjpbMjQ0NzMwMDUyLDE5NjkyODkyMTQsNzQzOT
+c4MzEzXX0=
 -->
