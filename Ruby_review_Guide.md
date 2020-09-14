@@ -194,7 +194,10 @@ Post Class:
 		 
 
 > class Post < ActiveRecord::Base 
-> belongs_to :author, class_name: "User" validates :title, presence: true validates :content, presence: true end
+> belongs_to :author, class_name: "User" 
+> validates :title, presence: true 
+> validates :content, presence: true 
+> end
 
 User class: 
 **has_many :posts, foreign_key: "author_id"** 
@@ -205,6 +208,12 @@ User class:
 > :email, presence: true, uniqueness: true  has_many :posts,
 > foreign_key: "author_id"  end
 
+## To Add An Index, We Get All Of The Posts and Iterate Over Them In The Corresponding View
+
+class PostsController < ApplicationController 
+get "/posts" do #INDEX 
+	@posts = Post.all 
+	erb :
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjI2NzM3MjcsNzQzOTc4MzEzXX0=
+eyJoaXN0b3J5IjpbMjE4MTE5NzAsNzQzOTc4MzEzXX0=
 -->
