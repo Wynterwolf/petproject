@@ -321,10 +321,8 @@ styled_flash
 
 How Do We Make Navigation Links Appear On Every Page?
 - We use the layout.erb file and add navigation links above yield 
-- In order to add navigation links we use
-
-tags
+- In order to add navigation links we use `<nav> </nav> `tags
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2OTE0MDYzNywxNjU5MTIzNzA2LDE5Nj
+eyJoaXN0b3J5IjpbLTY2NjQ2NzA5NCwxNjU5MTIzNzA2LDE5Nj
 kyODkyMTQsNzQzOTc4MzEzXX0=
 -->
