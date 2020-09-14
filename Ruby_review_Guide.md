@@ -63,31 +63,31 @@ To Test It's Working
 We'll need a `users` table with a column `password_digest` 
 We'll also need an additional column to find a user by (email or username) 
 
-PostsTable 
+**PostsTable** 
 Add a posts table with 3 columns 
  - **title**:string 
  - **content**:text 
  - **author_id**:integer
 
-Models
+**Models**
  - User Model
 	 - We need a "User Model" that inherits from "ActiveRecord::Base"
 	 - It should invoke the "has_secure_password" macro
 	 
-Post Model
+**Post Model**
  - Add a Post Model that belongs_to an author (a User)
 
-Views
+**Views**
  - We need a view with a "registration form" for "creating a new account" 
  - We need a view with "login form" for "logging into an existing account"
  - We need to have "navigation links" in "layout.erb"
  
- Navigation Links 
+ **Navigation Links** 
  - This is used for Navigation and it helps us implement Conditional Logic
  - It should have Conditional Logic for Displaying Buttons (login, logout, sign up)
  - We have to implement yield so the same thing appears on every page.
 
-Views Files
+**Views Files**
  - index view
 	 - Shows a list of posts with links to the full post
  - show view
@@ -97,7 +97,7 @@ Views Files
  - edit view
 	 - Displays form so we can update an existing post. 
 	  
-Controllers
+**Controllers**
  - SessionsController
 	 - For Logging In and Logging Out
  - UsersController
@@ -105,7 +105,7 @@ Controllers
  - PostsController
 	 - For CRUD actions for posts
 	 
-Routes (HTTP VERB + PATH) 
+**Routes (HTTP VERB + PATH)** 
  - get "/login" 
 	 - Renders The Log In Form
  - post "/login" 
@@ -131,7 +131,9 @@ Routes (HTTP VERB + PATH)
 - delete "/posts/:id" 
 	- Delete a particular post (only deletable by author of post)
 
-
+HTTP VERBS 
+POST (CREATE) 
+GET (READ) ● PUT (UPDATE) ● PATCH (UPDATE) ● DELETE (DELETE)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NzYyNzc5Nyw3NDM5NzgzMTNdfQ==
+eyJoaXN0b3J5IjpbOTc4NTkwNDgwLDc0Mzk3ODMxM119
 -->
