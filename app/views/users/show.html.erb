@@ -1,0 +1,15 @@
+<h1> User Show Page </h1>
+
+<h1>Welcome <%= @user.email %> </h1>
+
+These are your current listings
+
+<% @dogs.each do |dog| %>
+<p><a href="/dogs/<%= dog.id %>"><%= dog.name %></a></p>
+<% end %>
+
+<% if authorize_user(@user) %>
+  <div>
+    <a href="/users/<%= @user.id %>/edit"><button>Edit</button></a> 
+  </div>
+<% end %>
