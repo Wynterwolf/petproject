@@ -16,4 +16,15 @@ class UsersController < ApplicationController
             #needs an error
         end
     end
+
+    get '/users/:id' do
+        #Work on the show page to display user information
+    
+        #greet user
+
+        #list their owned dogs
+
+        #edit button for changing username
+        erb: 
+    end
 end
